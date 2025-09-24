@@ -1,15 +1,16 @@
-function toggleMode() {
-  const html = document.documentElement
-  html.classList.toggle("light")
+console.log("Script carregado");
+document.querySelector("#switch button").addEventListener("click", function() {
+  const html = document.documentElement;
+  html.classList.toggle("light");
 
-  const img = document.querySelector("#profile img")
-
+  const img = document.querySelector("#profile img");
   if (html.classList.contains("light")) {
-    img.setAttribute("src", "./Perfil2.jpg")
+    img.src = "./Perfil.jpeg";
   } else {
-    img.setAttribute("src", "./Perfil.jpeg")
+    img.src = "./Perfil2.jpg";
   }
-}
 
+  console.log("Imagem trocada:", img.src);
+});
 
 
